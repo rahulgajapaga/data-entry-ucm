@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form action = "post_json" method = "POST">
+    <div class="form-group">
+        <label for="firstName">Firstname</label>
+        <input onkeydown="return /[a-zA-Z]/i.test(event.key)" type="text" class="form-control" id="first_name" name="first_name" aria-describedby="firstNameHelp" required >
+        <small id="firstNameHelp" class="form-text text-muted"></small>
+    </div>
+
+    <div class="form-group">
+        <label for="lastName">Lastname</label>
+        <input onkeydown="return /[a-zA-Z]/i.test(event.key)" type="text" class="form-control" id="last_name" name="last_name" aria-describedby="lastNameHelp" required>
+        <small id="lastNameHelp" class="form-text text-muted"></small>
+    </div>
+
+    
+	<button type="submit"  class="btn btn-primary">Submit</button>
+    
+</form>
+<br>
+    <a href="result" ><button type="submit" class="btn btn-primary">Retrive</button></a>
+    
+
+{% endblock %}

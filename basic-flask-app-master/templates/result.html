@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block content %}
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">First Name</th>
+      <th scope="col">Last Name</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for key, values in results.items() %}
+      <tr>
+        {% for value in values %}
+        <th scope="row">{{ value }}</th>
+              {% endfor %}
+        </tr>
+    {% endfor %}
+</tbody>
+</table>
+
+<p></p>
+
+
+{% endblock %}
